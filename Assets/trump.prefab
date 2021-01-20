@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6161474452328817218}
   - component: {fileID: 6161474452328817217}
   - component: {fileID: 6161474452328817219}
-  - component: {fileID: 6161474452328817228}
   - component: {fileID: 6161474452328817229}
   m_Layer: 0
   m_Name: trump
@@ -165,18 +164,6 @@ MonoBehaviour:
   sb4: {fileID: 0}
   sb5: {fileID: 0}
   sb6: {fileID: 0}
---- !u!114 &6161474452328817228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161474452328817221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2b780dbfc4756144bb2d55bd59de0ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &6161474452328817229
 AudioSource:
   m_ObjectHideFlags: 0

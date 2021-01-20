@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class move : MonoBehaviour
 {
-
 	public int moveSpd = 10;
     //public int rotSpd = 5;
     Vector2 _initPos;

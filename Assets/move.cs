@@ -25,6 +25,8 @@ public class move : MonoBehaviour
 
     float rand;
 
+    Vector2 mousePos;
+
     void Awake()
     {
         _initPos = transform.position;
@@ -35,10 +37,20 @@ public class move : MonoBehaviour
 
     void Update()
     {
-      if(Input.GetKey(KeyCode.RightArrow))
-        	transform.Translate(Vector2.right*moveSpd*Time.deltaTime);
-      if(Input.GetKey(KeyCode.LeftArrow))
-        	transform.Translate(Vector2.left*moveSpd*Time.deltaTime);
+
+        if (Input.GetMouseButton(0))
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if(mousePos.x > transform.position.x)
+                transform.Translate(Vector2.right * moveSpd * Time.deltaTime);
+            if(mousePos.x < transform.position.x)
+                transform.Translate(Vector2.left * moveSpd * Time.deltaTime);
+        }
+
+        if(Input.GetKey(KeyCode.RightArrow))
+            	transform.Translate(Vector2.right*moveSpd*Time.deltaTime);
+        if(Input.GetKey(KeyCode.LeftArrow))
+        	    transform.Translate(Vector2.left*moveSpd*Time.deltaTime);
 
         //transform.rotation = Quaternion.Slerp(transform.rotation, _initRot, rotSpd * Time.deltaTime);
 
